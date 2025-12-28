@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chuva de iscas Pro</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+        
+        :root {
+            --water-deep: #bae6fd; /* Light Blue (Sky 200) */
+            --water-mid: #7dd3fc;  /* Mid Light Blue (Sky 300) */
+            --water-light: #f0f9ff; /* Very Light Blue (Sky 50) */
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--water-deep);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* Efeito de Água de Fundo - Atualizado para tons claros */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                linear-gradient(180deg, rgba(224, 242, 254, 0.6) 0%, rgba(186, 230, 253, 0.9) 100%),
+                url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 800 800'%3E%3Cpath d='M0 400 Q 200 350 400 400 T 800 400' fill='none' stroke='%230ea5e9' stroke-width='1' opacity='0.1'/%3E%3Cpath d='M0 200 Q 200 150 400 200 T 800 200' fill='none' stroke='%230ea5e9' stroke-width='1' opacity='0.08'/%3E%3Cpath d='M0 600 Q 200 550 400 600 T 800 600' fill='none' stroke='%230ea5e9' stroke-width='1' opacity='0.08'/%3E%3C/svg%3E");
+            background-size: cover, 800px 800px;
+            z-index: -1;
+            animation: waterFlow 25s linear infinite;
+        }
+
+        @keyframes waterFlow {
+            from { background-position: 0 0, 0 0; }
+            to { background-position: 0 0, 800px 400px; }
+        }
+
+        /* Camada de brilho (caustics sutil) */
+        body::after {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 50% -20%, rgba(255, 255, 255, 0.5) 0%, transparent 80%);
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        /* Scrollbar personalizada para combinar com o tema claro */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.2);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #7dd3fc;
+            border-radius: 10px;
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "recharts": "https://esm.sh/recharts@^3.6.0",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "@google/genai": "https://esm.sh/@google/genai@^1.34.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/"
+  }
+}
+</script>
+</head>
+<body>
+    <div id="root"></div>
+</body>
+</html>

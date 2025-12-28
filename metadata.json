@@ -1,0 +1,7 @@
+{
+  "name": "Chuva de iscas Pro - Desempenho de Pesca",
+  "description": "Um aplicativo avançado para pescadores monitorarem seu desempenho em tempo real, calculando taxas de conversão, eficiência de arremessos e obtendo insights de IA sobre suas sessões de pesca.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
