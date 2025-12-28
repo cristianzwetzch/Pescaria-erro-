@@ -299,7 +299,7 @@ const App: React.FC = () => {
               <div className="absolute -top-4 -right-4 w-20 h-20 bg-sky-400/20 blur-2xl rounded-full"></div>
             </div>
             <div className="text-center space-y-2">
-              <h2 className="text-3xl font-black text-slate-800 tracking-tight">Como foi a Pescaria?</h2>
+              <h2 className="text-3xl font-black text-slate-800 tracking-tight">Como esta a Pescaria?</h2>
               <p className="text-slate-600 max-w-xs mx-auto font-medium">Sincronize seus arremessos e transforme ataques em conquistas com Chuva de iscas.</p>
             </div>
             
